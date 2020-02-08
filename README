@@ -1,0 +1,32 @@
+
+
+1.Choice of direction and why?
+  java (jdk-12.0.1) for implementation;
+  opencsv5,commons-lang3 as lib for csv file read/write
+  
+  First, I use excel to validate the source data; make sure I could figure out how each report column generated based on source files;
+  Second, I defined several java data model class to populate what we need from the source file
+  Last, I implement the report generate process
+  
+2. Where you ran into issues
+
+The most challenging part is understand the problem and figure out how each report data get generatd;
+The LendingClub has description for each field but it might be vague for developer to fing the right place and combine;
+
+I ran into timeout of 2hour, so I gave up the generation of last fields "ADJ. NET ANNUALIZED RETURN"
+
+3. Any other context you think we should have
+
+Basically I generated a runnable jar file named "LoanReport.jar"
+
+I accept two argument [sourceFile] [destFile]
+sourceFile --- the raw data file we download from LendingClub, defaut to be "LoanStats_securev1_2018Q4.csv"
+destFile --- the performance report file, default to be "perf_securev1_2018Q4.csv"
+
+For example:
+
+java -jar LoanReport.jar   //using default argument
+java -jar LoanReport.jar  LoanStats_securev1_2018Q4.csv   // specify data source file 
+java -jar LoanReport.jar  LoanStats_securev1_2018Q4.csv   target.csv  //specify both source/target files
+
+
