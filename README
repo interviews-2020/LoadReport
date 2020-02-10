@@ -1,6 +1,11 @@
+2-3 Hour Homework
 
+sourceFile links:
+https://dv01structuring.file.core.windows.net/datasets/data_challenge/LoanStats_securev1_2018Q4_20200207.csv.zip?st=2020-02-07T21%3A50%3A04Z&se=2020-02-08T21%3A50%3A04Z&sp=rl&sv=2018-03-28&sr=f&sig=PiIqfDgB%2F3SH9vXLQ3E1tzgilzYmhJBF1H45g%2FUi3Ic%3D
 
-1.Choice of direction and why?
+Try to use source data file to generate the "LOAN PERFORMANCE DETAILS" similar to the one on https://www.lendingclub.com/info/demand-and-credit-profile.action"
+
+1.Choice of direction and why
   java (jdk-12.0.1) for implementation;
   opencsv5,commons-lang3 as lib for csv file read/write
   
@@ -28,5 +33,3 @@ For example:
 java -jar LoanReport.jar   //using default argument
 java -jar LoanReport.jar  LoanStats_securev1_2018Q4.csv   // specify data source file 
 java -jar LoanReport.jar  LoanStats_securev1_2018Q4.csv   target.csv  //specify both source/target files
-
-
